@@ -1,0 +1,84 @@
+/**
+ * Set up Grid sizes
+ */
+
+@gridSystemWidth: 960px;
+/* Default values from grid-float.less
+@columnWidth:   60;
+@gutterWidth:   20;
+@columns:       12;
+*/
+
+/**
+ * General style for entire page
+ */
+.inner-wrap {
+    .container();
+    width: @gridSystemWidth;
+    html.vgrid & {
+        .showGrid(@gridSystemWidth);
+        background-color: white;
+    }
+    background-color: white;
+    border: 10px, solid, white;
+}
+
+.row {
+    .row();
+}
+
+/**
+ * Style for the different sections
+ */
+
+.main.has-sidebar-left {
+    .column(8);
+}
+
+.main.has-sidebar-right {
+    .column(8);
+}
+
+.main {
+    .column(8);
+    .push(2);
+    margin-bottom: @magicNumber;
+    .next {
+        float: left;
+    }
+    .previous {
+        float: right;
+    }
+}
+
+.sidebar-left {
+    .column(3);
+    padding-left: 5px;
+    margin-top: @magicNumber * 3;
+}
+
+.sidebar-right {
+    .column(4);
+}
+
+.footer-column {
+    .column(4);
+}
+
+.site-footer {
+    .column(12);
+}
+
+.author-byline {
+    border: 1px solid black;
+    margin-bottom: @magicNumber;
+    .clearfix();
+}
+
+.byline {
+    .column(6);
+    .push(3);
+    border: 1px solid black;
+    .adjustwidth-border(6, 2);
+    margin-bottom: @magicNumber;
+}

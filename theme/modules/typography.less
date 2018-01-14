@@ -1,0 +1,32 @@
+@import "typography-font-families.less";
+@import "typography-sizes.less";
+@import "typography-mixins.less";
+@import "typography-defaults.less";
+
+.inner-wrap {
+    .font();
+    html.hgrid & {
+        background-image: url(../img/grid/horisontal-grid-24.png);
+    }
+}
+
+.inner-wrap-breadcrumb,
+.inner-wrap-main,
+.inner-wrap-after-main,
+.inner-wrap-foter {
+    // .font();
+    .typographyHeadings();
+    .typographyTextElements();
+    .typographyCodeElements();
+    .typographyListElements();
+    .typographyTableElements();
+    .typographyOtherElements();
+    //background-image: url(../img/grid/horisontal-grid-24.png);
+}
+
+/* -------------------------------------
+ * Typography selections for this Site
+ */
+ @fontFamilyHeadings:  @fontFamilyJura;
+ @fontFamilyBody:      @fontFamilyRaleway;
+ @fontFamilyCode:      @fontFamilyMonospace;

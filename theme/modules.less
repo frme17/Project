@@ -1,0 +1,30 @@
+/**
+ * Base theme including all modules needed.
+ *
+ * Each module is within its own
+ * modules/some-module.less file and is imported by this file.
+ * Each module.less can be copied to ./some-module.less and will then
+ * be override modules/some-module.less. This is useful when several themes
+ * the same modules.
+ */
+//@import url(some-module.less);
+
+// Reset, or normalize the browser style
+@import url(normalize.less);
+
+// Basic region structure (removed in kmom03)
+//@import url(regions.less);
+
+// Responsive menu
+@import url(responsive-menu.less);
+
+// Grid (select one plus grid-helpers)
+@import url(grid-float.less);
+//@import url(grid-flex.less);
+@import url(grid-helpers.less);
+
+// Layout
+@import url(layout.less);
+
+// Typography
+@import url(typography.less);

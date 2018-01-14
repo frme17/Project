@@ -1,0 +1,262 @@
+/**
+* Anax Flat theme.
+*/
+@import url(modules.less);
+
+/**
+* Base colors
+*/
+@import url(basecolors.less);
+
+/**
+* Menu, Navigation bar
+*/
+@import url(menu.less);
+
+/**
+ * Figure, Handle Figure sizes and Responsivity for pictures using [FIGURE]
+ */
+@import url(figure.less);
+
+/** --------------------------------------------------------------
+ *  Logo images and text
+ */
+.site-logo-text-icon {
+    display: none;
+}
+
+.site-logo-text,
+.navbar2 {
+    font-family: @fontFamilyJura;
+}
+
+.logo-1 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/** ---------------------------------------------------------------
+ *  Flash
+ */
+.flash-wrap {
+    .column(12);
+    //height: (@magicNumber * 8) - 4;
+    margin-bottom: -6px;
+}
+
+/** ---------------------------------------------------------------
+ *  General Styles. Colors, fonts and padding
+ */
+
+body {
+     background-color: @canvasColor;
+ }
+
+ a:link {
+     color: @linkColor;
+     text-decoration: none;
+ }
+
+ a:visited {
+     color: @linkVisitedColor;
+ }
+ a:hover {
+     color: @linkHoverColor;
+     text-decoration: underline;
+ }
+
+ .next-previous {
+     font-weight: bolder;
+     a {
+         color: @buttonNextPrevColor;
+     }
+ }
+
+ .inner-wrap-footer {
+     a:link {
+         color: @footerLinkColor;
+     }
+     a:visited {
+         color: @footerVisitedColor;
+     }
+     a:hover {
+         color: @footerHoverColor;
+     }
+ }
+
+.clearleft {
+    clear: left;
+}
+
+/** ---------------------------------------------------------------
+  *  breadcrumbs
+  */
+.breadcrumb-wrap {
+    .column(12);
+}
+
+ .breadcrumb-list {
+
+     ul {
+         margin-top: 0px;
+         height: @magicNumber * 2;
+     }
+
+     li {
+         display: inline-block;
+         border-radius: 3px;
+         padding: 2px;
+         margin: 3px;
+         margin-top: 8px;
+     }
+}
+
+/** -------------------------------------------------------------
+ * Sidebar right
+ */
+.sidebar-right {
+    border-left: 1px solid @sidebarBorder;
+    padding-left:5px;
+    padding-right:5px;
+    .adjustwidth-border(3, 11);
+}
+
+
+/** ------------------------------------------------------------
+ *  Responsive design
+ */
+img {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 1590px) {
+    .logo-1 {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 1490px) {
+    .logo-1 {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .logo-1 {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .logo-1 {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .logo-1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .figure {
+        &.blogg-image {
+            float: none;
+            margin-left: 0px;
+            margin-right: 8px;
+            .clearfix();
+        }
+    }
+
+    .inner-wrap {
+        width: 100%;
+    }
+
+    .flash-wrap {
+        padding-left: 0px;
+        height: auto;
+    }
+
+    .main,
+    .main.has-sidebar-right {
+        .column(10);
+        .push(1);
+    }
+
+    .main.has-sidebar-left {
+        .column(8);
+    }
+
+    .sidebar-left {
+        .column(3);
+        padding-left: 5px;
+    }
+
+    .sidebar-right {
+        .column(12);
+        border-top: 1px solid @sidebarBorder;
+        border-left: none;
+    }
+
+
+}
+
+@media screen and (max-width: 700px) {
+    .footer-column {
+        .column(12);
+    }
+    .byline {
+        .column(10);
+        .push(1);
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .main,
+    .main.has-sidebar-left,
+    .main.has-sidebar-right {
+        .column(12);
+        width: 95.5%;
+        margin-left: 1.04166667%;
+        padding-left: 5px;
+    }
+    .sidebar-left,
+    .sidebar-right {
+        .column(12);
+    }
+
+    .site-header {
+        height: @magicNumber * 2;
+    }
+
+    .navbar2 {
+        display: none;
+    }
+
+    .site-logo-text {
+        .column(9);
+    }
+
+    .profile {
+        .column(3);
+    }
+
+    .breadcrumb-wrap {
+        height: @magicNumber * 2;
+    }
+
+}
+
+@media screen and (max-width: 470px) {
+    .figure.left-colleague {
+        float: none;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .site-logo-text {
+        font-size: 1em;
+    }
+}
